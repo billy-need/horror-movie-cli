@@ -6,12 +6,11 @@ require "horror/movie/version"
 Gem::Specification.new do |spec|
   spec.name          = "horror-movie-cli"
   spec.version       = Horror::Movie::VERSION
-  spec.authors       = ["'Jazmin M'"]
-  spec.email         = ["'jazminmerckel@gmail.com'"]
+  spec.authors       = ["'billy needrith'"]
+  spec.email         = ["'billy.needrith@gmail.com'"]
 
   spec.summary       = %q{Horror movie CLI}
   spec.description   = %q{This Ruby CLI Gem provides a listing of the Top 25 Horror Movies from the Rotten Tomatoes website.}
-  spec.homepage      = "https://github.com/watchjazcode/horror-movie-cli"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -19,9 +18,6 @@ Gem::Specification.new do |spec|
   if spec.respond_to?(:metadata)
     spec.metadata["allowed_push_host"] = "https://rubygems.org"
 
-    spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "https://github.com/watchjazcode/horror-movie-cli"
-    spec.metadata["changelog_uri"] = "https://github.com/watchjazcode/horror-movie-cli"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
