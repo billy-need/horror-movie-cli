@@ -136,10 +136,9 @@ module Horror
       def goodbye
 	      puts ""
 	      puts "------------------------------------------------".colorize :red
-	      puts "Thank you for your interest. Have a spooky day!".colorize :red
+	      puts "Thank you! Come back soon!".colorize :red
 	      puts ""
 	      puts ""
-	    	puts File.read("lib/horror/movie/skull.txt").colorize :red
 	    	puts ""
 	    	puts "------------------------------------------------".colorize :red
 	      exit
