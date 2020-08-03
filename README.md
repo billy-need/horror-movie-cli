@@ -26,7 +26,7 @@ Or install it yourself as:
 
 ## Using the Horror-Movie-CLI-Gem
 
-To execute the gem, type `$ horror-movie-cli` and follow the on-screen prompts.
+To execute the gem, type `clear` and follow the on-screen prompts.
 
 To exit the program, type `exit` when prompted for input.
 
