@@ -37,24 +37,22 @@ module Horror
 			end
 
 			def self.all
-        @@all
-      end
+        		@@all
+      		end
 
-      def self.find(id)
-        self.all[id-1]
-      end
+      		def self.find(id)
+       			 self.all[id-1]
+      		end
 
-      #homework: write a method that returns an array of all listing objects, whose movie title matches a given movie title or keyword.
-
-      def self.search_by_title(movie_title)
-        matching_movies = []
-        @@all.each do |listing| 
-        	if listing.movie_title.downcase.include? movie_title.downcase
-          	matching_movies << listing
-          end
-        end
-        return matching_movies
-      end
+			def self.search_by_title(movie_title)
+				matching_movies = []
+				@@all.each do |listing| 
+					if listing.movie_title.downcase.include? movie_title.downcase
+					matching_movies << listing
+					end
+				end
+				return matching_movies
+			end
 		end
 	end
 end

@@ -2,12 +2,6 @@
 
 Welcome! This Ruby CLI Gem provides a listing of the Top 25 Horror Movies from the Rotten Tomatoes website. Through this gem the user will be able to see the list, obtain specific movie information, a summary, and a random critic's review. 
 
-## Demo Video
-
-Link to demo: 
-
-https://youtu.be/82l2RuPqzJQ
-
 ## Installing the Horror-Movie-CLI-Gem
 
 Add this line to your application's Gemfile:

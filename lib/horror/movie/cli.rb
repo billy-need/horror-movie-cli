@@ -1,26 +1,39 @@
 require_relative "../movie/scraper.rb"
 require_relative "../movie/listing.rb"
 require_relative "../movie/info.rb"
+require "pry"
 
 module Horror
   module Movie
     class Cli
-      def welcome
+	  def welcome
       	Horror::Movie::Scraper.new.scrape_horror_movies
       	puts File.read("lib/horror/movie/intro.txt").colorize :red
-      	puts ""
+    	puts ""
       	puts "Hello! Welcome to the Rotten Tomatoes: Top 25 Horror Movies List.".colorize :red
       	puts ""
       	main_program
       end
 
-      def main_program
-
+	  def main_program
       	print_movies
-
+		  i = 1
+  
+		  # Using While Loop  
+		  while true
+		
+			  # Printing Values 
+			  puts i * 3
+			  i += 1
+			  if input = exit
+		
+				  # Using Break Statement  
+				  break
+			  end        
+		  end
         puts "------------------------------------------------".colorize :red
         puts ""
-		    puts "Would you like further information on a movie?".colorize :red
+		puts "Would you like further information on a movie?".colorize :red
       	puts ""
       	puts "------------------------------------------------".colorize :red
 		    puts "If yes, please enter a number 1-25.".colorize :red
@@ -41,7 +54,6 @@ module Horror
 		    puts "Would you like to see information on another movie?".colorize :red
 		    puts ""
 		    puts "Please enter yes or no.".colorize :red
-		    puts ""
 
 		    another_movie?
 		  end
@@ -49,7 +61,7 @@ module Horror
 		  def correct_number?
 		  	input = gets.strip
 		  	until input.downcase == "no" || (1..25).include?(input.to_i) || input.downcase == "exit"
-		  		puts ""
+		  	  puts ""
 		  	  puts "------------------------------------------------".colorize :red
 		  	  puts "Invalid answer.".colorize :red
 		  	  puts ""
@@ -129,15 +141,15 @@ module Horror
 		    puts "---------- Rotten Tomatoes: Top 25 Horror Movies ----------".colorize :red
 		    puts ""
 		    Horror::Movie::Listing.all.each.with_index do |movie, index|
-	        puts "#{index + 1}. #{movie.movie_title}"
-	      end
+				puts "#{index + 1}. #{movie.movie_title}"
+	      	end
       end
 
       def goodbye
 	      puts ""
 	      puts "------------------------------------------------".colorize :red
-	      puts "Thank you! Come back soon!".colorize :red
-	      puts ""
+	      puts "Goodbye! Stay scared!".colorize :red
+	      puts File.read("lib/horror/movie/skull.txt").colorize :red
 	      puts ""
 	    	puts ""
 	    	puts "------------------------------------------------".colorize :red
