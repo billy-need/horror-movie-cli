@@ -16,21 +16,8 @@ module Horror
       end
 
 	  def main_program
-      	print_movies
-		  i = 1
-  
-		  # Using While Loop  
-		  while true
-		
-			  # Printing Values 
-			  puts i * 3
-			  i += 1
-			  if input = exit
-		
-				  # Using Break Statement  
-				  break
-			  end        
-		  end
+		  print_movies_yeah
+
         puts "------------------------------------------------".colorize :red
         puts ""
 		puts "Would you like further information on a movie?".colorize :red
@@ -119,7 +106,7 @@ module Horror
 		    puts "Movie Title:             #{movie.movie_title}"
 		    puts "Movie Url:               #{movie.movie_url}"
 		    puts "Number of Reviews:       #{movie.number_of_reviews}"
-		    puts ""
+			puts ""
       end
 
       def print_movie_info(movie)
@@ -136,7 +123,7 @@ module Horror
 		    puts "------------------------------------------------".colorize :red
       end
 
-      def print_movies
+      def print_movies_yeah
 		    puts ""
 		    puts "---------- Rotten Tomatoes: Top 25 Horror Movies ----------".colorize :red
 		    puts ""
@@ -158,4 +145,3 @@ module Horror
     end
   end
 end
-
